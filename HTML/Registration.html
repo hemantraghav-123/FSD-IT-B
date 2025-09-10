@@ -23,7 +23,7 @@
       }
 
       form {
-        background-color: #ffffff;
+        background-color: skyblue;
         padding: 25px;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -71,10 +71,10 @@
       }
 
       input[type="submit"] {
-        width: 100%;
+        width: 50%;
         padding: 12px;
-        background-color: #1877f2;
-        color: white;
+        background-color: green;
+        color: black;
         border: none;
         border-radius: 4px;
         font-size: 16px;
@@ -83,7 +83,22 @@
       }
 
       input[type="submit"]:hover {
-        background-color: #166fe5;
+        background-color: white;
+      }
+      
+      input[type="Reset"] {
+        width: 50%;
+        padding: 12px;
+        background-color: red;
+        color: black;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      input[type="Reset"]:hover {
+        background-color: white;
       }
       
     </style>
@@ -94,13 +109,13 @@
 
     <form>
       <div class="form-group">
-        <label for="fname">First Name:</label>
+        <label for="fname">Name:</label>
         <input id="fname" type="text" placeholder="Enter Your First Name" />
       </div>
 
       <div class="form-group">
-        <label for="lname">Last Name:</label>
-        <input id="lname" type="text" placeholder="Enter Your Last Name" />
+      <label for="phone">Phone number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your Phone number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
       </div>
 
       <div class="form-group">
@@ -109,18 +124,8 @@
       </div>
 
       <div class="form-group">
-        <label for="date">Enter Date:</label>
-        <input id="date" type="date" />
-      </div>
-
-      <div class="form-group">
-        <label for="username">Choose a Username:</label>
-        <input id="username" type="text" placeholder="Enter your username" />
-      </div>
-
-      <div class="form-group">
-        <label for="number">Enter Your Number:</label>
-        <input id="number" type="tel" placeholder="Enter your number" />
+        <label for="DOB">Enter DOB:</label>
+        <input id="Date of birth" type="date" />
       </div>
 
       <div class="form-group">
@@ -129,17 +134,38 @@
           <option value="">--Select--</option>
           <option value="male">Male</option>
           <option value="Female">Female</option>
+          <option value="Other">Other</option>
         </select>
       </div>
 
       <div class="form-group">
-        <label>Subscription Plan:</label>
-        <label><input type="radio" name="plan" value="basic" /> Basic</label>
-        <label><input type="radio" name="plan" value="paid" /> Paid</label>
-        <label><input type="radio" name="plan" value="pro" /> Pro</label>
-        <label><input type="radio" name="plan" value="pro" /> Paid + Pro</label>
+        <label>Branch:</label>
+        <label><input type="Radio" name="Branch" value="Cse" /> Cse</label>
+        <label><input type="Radio" name="Branch" value="Aiml" /> Aiml</label>
+        <label><input type="Radio" name="Branch" value="Data science" /> Data science</label>
+        <label><input type="Radio" name="Branch" value="Information Technology" /> IT</label>
       </div>
 
+       <div class="form-group">
+        <label for="Semester">Semester:</label>
+        <select id="Number" required>
+          <option value="">--Select--</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
+      </div>
+      
+      <div>
+        <label>Address:</label>
+      <textarea name="Address" rows="3" placeholder="Enter your address"></textarea>
+      </div>
+    
       <div class="form-group">
         <label for="country">Choose Your Country:</label>
         <select id="country" name="countries">
@@ -152,19 +178,14 @@
       </div>
 
       <div class="form-group">
-        <label>Courses:</label>
-        <label><input type="checkbox" name="courses" value="BTECH" /> BTECH</label>
-        <label><input type="checkbox" name="courses" value="MTECH" /> MTECH</label>
-        <label><input type="checkbox" name="courses" value="BCA" /> BCA</label>
-        <label><input type="checkbox" name="courses" value="MCA" /> MCA</label>
-      </div>
-
-      <div class="form-group">
         <label for="fileupload">Upload Your File:</label>
         <input type="file" id="fileupload" />
       </div>
 
-      <input type="submit" value="Submit" />
+    <div class="form-group">
+  <pre><input type="submit" value="Submit" /> <input type="Reset" value="Reset" />
+     </pre>
+    </div>
   
     </form>
   </body>
